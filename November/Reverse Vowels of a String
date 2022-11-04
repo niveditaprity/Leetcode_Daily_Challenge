@@ -1,0 +1,72 @@
+class Solution {
+public:
+
+
+    set<char>dict;
+
+    int vowel(string s,int i,int j,bool first)
+    {
+        if(first)
+        {
+             while(i<j)
+        {
+            if(dict.find(s[i])!=dict.end())
+            {
+                return i;
+            }
+            i++;
+        }
+
+        }
+        else
+        {
+            while(j>i)
+            {
+                if(dict.find(s[j])!=dict.end())
+                {
+                    return j;
+                }
+                j--;
+            }
+        }
+       
+
+        return -1;
+    }
+
+    string reverseVowels(string s) {
+
+
+       
+
+        dict = {'a','A','e','E','i','I','o','O','u','U'};
+
+
+        int i=0;
+        int j=s.size()-1;
+
+        while(i<j)
+        {
+             i=vowel(s,i,j,true);
+            if(i==-1)
+            {
+                return s;
+            }
+             j=vowel(s,i,j,false);
+            if(j==-1)
+            {
+                return s;
+            }
+
+            char temp=s[i];   
+            s[i]=s[j];        
+            s[j]=temp;       
+            i++;
+            j--;
+        }
+        
+        return s;
+
+        
+    }
+};
