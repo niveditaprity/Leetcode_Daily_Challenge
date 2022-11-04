@@ -1,0 +1,45 @@
+//345. Reverse Vowels of a String
+two pointers approach
+
+class Solution {
+    private boolean isVowel(char ch)
+    {
+        if(ch=='a' || ch=='A' || ch=='e' || ch=='E' || ch=='i' || ch=='I' || ch=='o' || ch=='O'
+           ||ch=='u'|| ch=='U')
+             return true;
+
+        return false;     
+
+    }
+    public String reverseVowels(String s) {
+
+        if(s.length()==1)
+            return s;
+
+        int left=0;
+        int right=s.length()-1;
+        StringBuilder temp = new StringBuilder(s);
+
+        while(left<=right)
+        {
+            if(!isVowel(s.charAt(left)))
+                left++;
+            
+            if(!isVowel(s.charAt(right)))       
+                right--;
+
+            if(isVowel(s.charAt(left)) && isVowel(s.charAt(right)))
+            {
+                char ch = s.charAt(left);
+                temp.setCharAt(left,s.charAt(right));
+                temp.setCharAt(right,ch);
+                left++;
+                right--;
+            }
+                            
+        }
+
+        return new String(temp);
+        
+    }
+}
