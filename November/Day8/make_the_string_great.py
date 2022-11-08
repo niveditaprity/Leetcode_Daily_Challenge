@@ -43,7 +43,7 @@ class Solution:
         
 
 
-# one pass
+# using stack
 class Solution:
     def makeGood(self, s: str) -> str:
         stack = []
