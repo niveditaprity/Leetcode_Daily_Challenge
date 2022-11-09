@@ -36,7 +36,6 @@ class StockSpanner:
         count = 1
         
         while self.stack and self.stack[-1][0] <= price:
-            print('run')
             _, oldCount = self.stack.pop()
             count += oldCount
         
