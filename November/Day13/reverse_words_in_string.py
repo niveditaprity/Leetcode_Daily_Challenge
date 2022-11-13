@@ -6,7 +6,7 @@ class Solution:
         return s
 
  
-# using stack
+# using stack (39ms - faster than 87%)
 class Solution:
     def reverseWords(self, s: str) -> str:
         stack = []
