@@ -5,7 +5,7 @@ bool isVowel(char c){
             return true;
         return false;
     }
-    bool halvesAreAlike(string s) {
+    bool halvesAreAliike(string s) {
         int l=s.length();
         int c1=0,c2=0;
         for(int i=0; i<l/2; ++i){
