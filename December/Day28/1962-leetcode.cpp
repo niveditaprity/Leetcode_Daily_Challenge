@@ -22,7 +22,7 @@ public:
 
         int ans = 0;
         while(!pq.empty())  
-        {
+        { 
             ans += pq.top();
             pq.pop();
         }
