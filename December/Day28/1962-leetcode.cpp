@@ -1,18 +1,18 @@
-// Time complexity -: O(2n)+O(k)
-// space complexity -: O(log n)
+// Time complexity -: O(log(n))
+// space complexity -: O(n)
 
 class Solution {
 public:
     int minStoneSum(vector<int>& piles, int k) {
 
-        priority_queue<int>pq;// O(log n)
+        priority_queue<int>pq; // O(n)
 
-        for(int i = 0; i < piles.size(); i++) // O(n)
+        for(int i = 0; i < piles.size(); i++) 
         {
             pq.push(piles[i]);
         }
 
-        while(k != 0)         // O(k)
+        while(k != 0)         
         {
             int val = pq.top();
             pq.pop();
@@ -21,7 +21,7 @@ public:
         }
 
         int ans = 0;
-        while(!pq.empty())  // O(n)
+        while(!pq.empty())  
         {
             ans += pq.top();
             pq.pop();
