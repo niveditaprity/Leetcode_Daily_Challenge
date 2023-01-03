@@ -20,5 +20,5 @@ class Solution:
             for col in range(1, len(strs)):
                 if strs[col][row] < strs[col-1][row]:
                     count += 1
-
+                    break
         return count
