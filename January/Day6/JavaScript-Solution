@@ -1,0 +1,13 @@
+//JavaScript Solution of Leetcode Q 1833. Maximum Ice Cream Bars added
+
+
+var maxIceCream = function(costs, coins) {
+    let count =0;
+    costs.sort((a,b)=>a-b);
+
+    for (let i=0;i<costs.length && coins >=costs[i] ;i++){
+        count++;  
+        coins-=costs[i];        
+    }
+     return count;
+};
