@@ -7,4 +7,6 @@ class Solution:
             if min_el <= coins:
                 coins -= min_el
                 count += 1
+            else:
+                break
         return count
