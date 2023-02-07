@@ -7,7 +7,7 @@ public:
       while(i<n)
       {
         mp[fruits[i]]++;
-      while(j<n && mp.size()>2)
+      while(mp.size()>2)
       {
        if(mp[fruits[j]] == 1)
        {
