@@ -1,3 +1,6 @@
+
+https://www.youtube.com/watch?v=apuslVoXWng&ab_channel=TechAdorabyNivedita
+
 class Solution {
 public:
     long long minimumTime(vector<int>& time, int totalTrips) {
